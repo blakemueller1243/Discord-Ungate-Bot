@@ -1,0 +1,39 @@
+{
+  "name": "my-first-discord-bot",
+  "version": "1.0.0",
+  "description": "discord bot to create embed messages and pull info from amazon asins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "C:\\Users\\blake\\Documents\\GitHub\\Discord-Ungate-Bot"
+  },
+  "keywords": [],
+  "author": "Sahn Gaku",
+  "license": "GNU",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "glob": "^7.1.7",
+    "immediate": "^3.3.0",
+    "inherits": "^2.0.4",
+    "jszip": "^3.6.0",
+    "lie": "^3.3.0",
+    "pako": "^2.0.3",
+    "readable-stream": "^3.6.0",
+    "rimraf": "^3.0.2",
+    "safe-buffer": "^5.2.1",
+    "selenium-webdriver": "^4.0.0-beta.4",
+    "set-immediate-shim": "^2.0.0",
+    "string_decoder": "^1.3.0",
+    "tmp": "^0.2.1",
+    "util-deprecate": "^1.0.2",
+    "ws": "^7.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
