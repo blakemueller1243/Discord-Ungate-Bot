@@ -1,0 +1,26 @@
+# (INSTALL THESE INTO THE ROOT DIRECTORY OF THE BOT)
+- dotenv             https://www.npmjs.com/package/dotenv               npm i dotenv
+- selenium           https://www.npmjs.com/package/selenium-webdriver   npm i selenium-webdriver
+- jszip              https://www.npmjs.com/package/jszip                npm i jszip
+- rimraf             https://www.npmjs.com/package/rimraf               npm i rimraf
+- tmp                https://www.npmjs.com/package/tmp                  npm i tmp
+- ws                 https://www.npmjs.com/package/ws                   npm i ws
+- glob               https://www.npmjs.com/package/glob                 npm i glob
+- fs.realpath        https://www.npmjs.com/package/fs.realpath          npm i fs.realpath
+- inflight           https://www.npmjs.com/package/inflight             npm i inflight
+- once               https://www.npmjs.com/package/once                 npm i once
+- wrappy             https://www.npmjs.com/package/wrappy               npm i wrappy
+- inherits           https://www.npmjs.com/package/inherits             npm i inherits
+- minimatch          https://www.npmjs.com/package/minimatch            npm i minimatch
+- brace-expansion    https://www.npmjs.com/package/brace-expansion      npm i brace-expansion
+- balanced-match     https://www.npmjs.com/package/balanced-match       npm i balanced-match
+- path-is-absolute   https://www.npmjs.com/package/path-is-absolute     npm i path-is-absolute
+- lie                https://www.npmjs.com/package/lie                  npm i lie
+- immediate          https://www.npmjs.com/package/immediate            npm i immediate
+- pako               https://www.npmjs.com/package/pako                 npm i pako
+- readable-stream    https://www.npmjs.com/package/readable-stream      npm i readable-stream
+- string_decoder     https://www.npmjs.com/package/string_decoder       npm i string_decoder
+- safe-buffer        https://www.npmjs.com/package/safe-buffer          npm i safe-buffer
+- util-deprecate     https://www.npmjs.com/package/util-deprecate       npm i util-deprecate
+- set-immediate-shim https://www.npmjs.com/package/set-immediate-shim   npm i set-immediate-shim
+- mysql2             https://www.npmjs.com/package/mysql2               npm i mysql2

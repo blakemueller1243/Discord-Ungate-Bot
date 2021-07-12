@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs');
 const util = require('util');
+const mysql = require('mysql2');
+const db = require('../database/db');
 require('dotenv').config();
 
 ///Prefix for commands

@@ -3,14 +3,25 @@
 ______________________________________
 ## [Unreleased]
 
-## [1.0.1] - 7-7-2021
+## [1.0.2] - 7-7-2021
+
 
 
 ______________________________________
 
 ## [Released]
 
+## [1.0.1] - 7-11-2021
+
+### Added
+
+added MySQL dependancy.
+
+Implemeneted first database for bot to use.
+
+
 ## [1.0.0] - 7-6-2021
+
 ### Added
 
 /// selenium node modules with dependencies for later use to expand the bots use.
