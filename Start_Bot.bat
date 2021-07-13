@@ -1,3 +1,3 @@
-cd C:\Users\blake\Desktop\Ungate-Bot\my-first-discord-bot
+cd C:\Users\blake\Documents\GitHub\Discord-Ungate-Bot
 
 node .
