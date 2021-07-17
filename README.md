@@ -7,3 +7,4 @@
 
 # Commands/format
 !autoungate (ASIN)    -  this will create an embedded message in the channel
+!changeprefix (prefix) - this will allow each guild to change the prefix to whatever they would like

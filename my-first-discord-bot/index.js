@@ -20,20 +20,41 @@ bot.on('ready', () =>{
     });
 });
 
+
+/// adding a guild to the database upon invite
 bot.on('guildCreate', async (guild) => {
-    try {
-        /// insert serverid and serverownerid into servers db
-    await connection.query(
-        `INSERT INTO Servers (serverId, serverOwnerId, paidRole) VALUES ('${guild.id}', '${guild.ownerID}', 1)`
-        );
-        /// insert server id into serverconfig db
-    await connection.query(
-        `INSERT INTO ServerConfig (serverId) VALUES ('${guild.id}')`
-        );
-    }catch(err){
-        console.log(err);
-    }
-});
+    // Guild the user needs to have the role in
+    let myGuild = await bot.guilds.fetch(process.env.BOT_GUILD);
+    console.log(myGuild);
+
+    // Role that the user needs
+    let requiredRole = process.env.PAID_ROLE;
+    console.log(requiredRole);
+
+    // Member object of the user in guildA
+    let guildOwner = await myGuild.members.fetch(guild.ownerID);
+
+    if (!guildOwner)
+      return console.log(`Oops, ${guild.owner} is not a member of your server.`)
+    
+    //Check if they have the role 
+    let ownerHasPaidRole = guildOwner.roles.cache.has(process.env.PAID_ROLE);
+
+    if (ownerHasPaidRole){
+      console.log(`Woohoo, ${guildOwner} has the required role`);}
+        try {
+            /// insert serverid and serverownerid into servers db
+        await connection.query(
+            `INSERT INTO Servers (serverId, serverOwnerId, paidRole) VALUES ('${guild.id}', '${guild.ownerID}', 1)`
+            );
+            /// insert server id into serverconfig db
+        await connection.query(
+            `INSERT INTO ServerConfig (serverId) VALUES ('${guild.id}')`
+            );
+        }catch(err){
+            console.log(err);
+    }});
+    
 
 
 
@@ -57,22 +78,24 @@ for(const file of commandFiles){
 
 
 ///Message Handler
-    bot.on('message', message =>{
+    bot.on('message', async (message) => {
         const prefix = guildCommandPrefixes.get(message.guild.id);
-        console.log(prefix);
+        console.log('caught message');
         if(!message.content.startsWith(prefix) || message.author.bot) return;
         const args = message.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
-        //console.log(guild);
-        console.log(prefix);
-        //console.log(result);
 
    ///basic ping pong test command
     if(command === 'help'){
         bot.commands.get('help').execute(message);
     }
-    if(command === 'ping'){
+    ///basic ping pong test command
+    else if(command === 'ping'){
         bot.commands.get('ping').execute(message);
+    }
+    ///change the servers prefix
+    else if(command === 'changeprefix'){
+        bot.commands.get('changeprefix').execute(message, connection, prefix, guildCommandPrefixes);
     }   
     ///arguments test
     else if (command === 'argsinfo'){
